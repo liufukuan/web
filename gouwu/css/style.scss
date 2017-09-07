@@ -1,0 +1,132 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-size:0.14rem;
+  box-sizing: border-box;
+ }
+
+ul, li {
+  list-style: none; }
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+   }
+html{
+font-size:625%;
+}
+
+img, div, body, html, ul, li, a {
+  -webkit-touch-callout: none; }
+
+input {
+  -webkit-appearance: none; }
+  body,html{
+      width: 100%;
+      height: 100%;
+  }
+#wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    header{
+        width: 100%;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        background: #FF8803;
+        color:#fff;
+        span{
+            padding: 0 0.1rem;
+            font-size: 0.12rem;
+            b{
+                font-size: 0.16rem;
+                display: inline-block;
+            }
+        }
+    }
+    section{
+        width: 100%;
+        flex-grow: 1;
+        overflow-y: scroll;
+        #web{
+            width: 100%;
+            h6{
+                height: 0.1rem;
+                background: #ccc;
+            }
+            #p{
+                height: 0.3rem;
+                line-height: 0.3rem;
+                padding: 0 0.2rem;
+                border-bottom: 1px solid #ccc;
+                i{
+                    color: red;
+                    margin-right: 0.1rem;
+                }
+                span{
+                   font-size: 0.16rem;
+                }
+                b{
+                    margin-left: 0.1rem;
+                    color:#ccc;
+                    font-size: 0.16rem;
+                }
+            }
+            #head{
+                width: 100%;
+                
+                dl{
+                    width: 100%;
+                    display: flex;
+                    dt{
+                        padding: 0.1rem;
+                    }
+                    dd{
+                        width: 100%;
+                        p{
+                            &:nth-child(1){
+                                font-size: 0.13rem;
+                                font-weight: 600;
+                                padding-right: 0.3rem; 
+                                padding-left: 0.1rem;
+                            }
+                            &:nth-child(2){
+                                margin-top: 0.2rem;
+                                padding: 0 0.2rem;
+                                font-weight: 600;
+                                font-size: 0.14rem;
+                                color:orangered;
+                                text-decoration: line-through;
+                                span{
+                                    float: right;
+                                    color:#ccc;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        height: 0.4rem;
+        display: flex;
+        justify-content: space-between;
+        div{
+            display: flex;
+            flex-direction: column;
+            padding: 0 0.1rem;
+            text-align: center;
+        }
+    }
+}
