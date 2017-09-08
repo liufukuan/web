@@ -1,0 +1,88 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    header{
+        width: 100%;
+        height: 1.5rem;
+        background: #3FA4FE;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.5rem;
+        color: #fff;
+        span{
+            padding: 0 0.2rem;
+            font-size: 0.5rem;
+            img{
+                width: 1.5rem;;
+                height:100%;
+                   
+            }
+        }
+    }
+    section{
+        width: 100%;
+        flex-grow: 1;
+        overflow-y: scroll;
+        dl{
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            dt{
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: 0.2rem;
+                background: #3FA4FE;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 1.5rem;
+                color: #fff;
+                font-size: 0.74rem;
+            }
+            dd{
+               padding: 0.3rem;
+               width: 60%;
+               p{
+                   width: 100%;
+                   &:nth-child(1){
+                       color:#000;
+                       font-weight: 600;
+                       line-height: 1rem;
+                       span{
+                           float: right;
+                           font-weight: 100;
+                           font-size: 0.3rem;
+                           font-weight: 600;
+                           color:#ccc;
+                       }
+                   }
+                   &:nth-child(2){
+                       font-weight: 600;
+                       font-size: 0.4rem;
+                       color: #DD925B;
+                   } 
+               }
+            }
+        }
+    }
+   footer{
+       width: 100%;
+       height: 1.6rem;
+       border-top: 1px solid #ccc;
+       display: flex;
+       line-height: 0.7rem;
+       justify-content: space-between;
+       text-align: center;
+       div{
+           display: flex;
+           flex-direction: column;
+           padding: 0 0.4rem;
+       }
+   }
+}
