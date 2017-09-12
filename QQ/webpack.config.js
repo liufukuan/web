@@ -12,7 +12,7 @@ var webpack=require("webpack");
                 loader:["babel-loader"]
             }]
         },
-        devServer:{
+        devServer:{//加载器
             port:8087,
             // hot:true,
             host:"localhost",

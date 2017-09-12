@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telphone=no, email=no" >
+    <link rel="stylesheet" type="" href="css/style.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css">
+     <script>
+         ;(function(doc,win){
+            var rem = 100 / 750 * document.documentElement.clientWidth;
+            console.log(rem)
+            doc.documentElement.style.fontSize = rem + 'px';
+            win.onresize = function(){
+            var rem = 100 / 750 * document.documentElement.clientWidth;
+            console.log(rem)
+            doc.documentElement.style.fontSize = rem+ 'px';
+            }
+        })(document,window)
+    </script>
+</head>
+<body>
+    <div id="wrap">
+    </div>
+    <template id="app">
+         <div id="wrap">
+               <headerr></headerr>
+               <boxx></boxx>
+         </div>
+    </template>
+    <template id="app1">
+           <header>
+                <span>《</span>
+                <span>京东注册</span>
+                <span></span>
+           </header>
+    </template>
+     <template id="app2">
+         <transition enter-active-class="animated bounce" :duration="1000" leave-active-class="animated bounce">
+          <section v-if="her">
+               <p><input type="text" placeholder="请输入图片验证码" v-model.trim.lazy="ter"><span>1215</span></p>
+               <p>
+                    <select name="" id="">
+                        <option value="">+86</option>
+                    </select>
+                    <input type="text" placeholder="请输入手机号" v-model="pwd">
+               </p>
+                <p>
+                    <input type="text" placeholder="请输入手机验证码" v-model="pwd1">
+                </p>
+                <p>
+                    你好这里是京东为您夫妇谢谢
+                </p>
+                <p><input type="button" value="确定"   @click="que"></p>
+                <p><input type="button" value="跳一跳"  @click="tiao"></p>
+            </section>
+        </transition>
+     </template>
+           
+            <script src="js/vue.min.js"></script>
+        <script>
+            var vm=new Vue({
+               el:"#wrap",
+               template:"#app",
+               components:{
+                   headerr:{
+                       template:"#app1"
+                   },
+                   boxx:{
+                       template:"#app2",
+                       data(){
+                           return{
+                                 ter:"",
+                                 pwd:"",
+                                 pwd1:"",
+                                 her:true
+                                 
+                           }
+                       },
+                       methods:{
+                           que(){
+                               console.log(this.ter);
+                               console.log(this.pwd);
+                               console.log(this.pwd1);
+                           },
+                           tiao(){
+                              this.her=!this.her;
+                           }
+                       }
+                   }
+               }
+            })
+        </script>
+</body>
+</html>
