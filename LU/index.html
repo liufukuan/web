@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <script>
+         ;(function(doc,win){
+            var rem = 100 / 750 * document.documentElement.clientWidth;
+            console.log(rem)
+            doc.documentElement.style.fontSize = rem + 'px';
+            win.onresize = function(){
+            var rem = 100 / 750 * document.documentElement.clientWidth;
+            console.log(rem)
+            doc.documentElement.style.fontSize = rem+ 'px';
+            }
+        })(document,window)
+    </script>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="app">
+    
+        <header class="header">
+            <p><input type="" name="" value=""></p>
+            <div><span class="iconfont icon-faxiandingdan"></span><span class="iconfont icon-tijiaodingdan"></span></div>
+        </header>
+        <main class="main">
+            <router-view></router-view>
+        </main>
+        <footer class="footer">
+            <router-link to="index" tag="p">首页</router-link>
+            <router-link to="my" tag="p">我听</router-link>
+            <router-link to="find" tag="p">发现</router-link>
+            <router-link to="mei" tag="p">未登录</router-link>
+        </footer>
+    </div>
+</body>
+
+</html>
